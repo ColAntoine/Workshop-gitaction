@@ -1,0 +1,14 @@
+name: run_unit_test
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  reun_unit_tests:
+      runs-on: ubuntu-latest
+
+      steps:
+          - name: unit_tests
+            run: gcc -o unit_test test.c sum.c -lcriterion && ./unit_test
