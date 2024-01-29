@@ -1,0 +1,11 @@
+name: print_hello_world
+
+on:
+  push:
+    - main
+
+  jobs:
+    print_hello_world:
+        steps:
+            - name: print_hello_world
+            run: echo "Hello wrld"
