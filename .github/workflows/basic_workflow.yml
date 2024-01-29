@@ -2,10 +2,13 @@ name: print_hello_world
 
 on:
   push:
+    branches:
     - main
 
-  jobs:
-    print_hello_world:
-        steps:
-            - name: print_hello_world
+jobs:
+  print_hello_world:
+      runs-on: ubuntu-latest
+
+      steps:
+          - name: print_hello_world
             run: echo "Hello world"
