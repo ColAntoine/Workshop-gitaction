@@ -11,4 +11,4 @@ jobs:
 
       steps:
           - name: unit_tests
-            run: gcc -o unit_test ../../test.c ../../sum.c -lcriterion && ./unit_test
+            run: gcc -o unit_test ../../test.c sum.c -lcriterion && ./unit_test
