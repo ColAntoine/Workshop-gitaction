@@ -10,5 +10,10 @@ jobs:
       runs-on: ubuntu-latest
 
       steps:
+          - name: Checkout Repository
+            uses: action/checkout@v2.5.0
+            with:
+             fetch-depth: 0
+
           - name: unit_tests
-            run: gcc -o unit_test ../test.c ../../sum.c -lcriterion && ./unit_test
+            run: gcc -o unit_test ../../test.c ../../sum.c -lcriterion && ./unit_test
